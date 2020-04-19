@@ -1,0 +1,13 @@
+# 英大文字だけからなる10文字の長さのコードを100個作る
+
+import secrets
+import string
+
+codes = []
+for i in range(10):  # 10個のコードを作る場合
+  while True:
+    c = ''.join(secrets.choice(string.ascii_uppercase) for x in range(50)) # range(10)が文字数。
+    if c not in codes: # 重複チェック
+      print(c)
+      codes.append(c)
+      break
